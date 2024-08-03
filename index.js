@@ -17,6 +17,9 @@ server.use('/api/doctor', doctorRouter);
 // Route for patient-related API endpoints
 server.use('/api/patient', patientRouter);
 
+server.use('/', (req, res) => {
+    res.send('Welcome to Hospital API');
+})
 
 server.listen(5000, () => {
     console.log('Server started at 5000');
